@@ -1,14 +1,21 @@
 package com.example.disaster_helper
 
 import android.content.Context
+import android.content.pm.PackageManager
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Base64
+import android.util.Log
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.fragment.app.Fragment
 import com.example.disaster_helper.Home.HomeFragment
 import com.example.disaster_helper.Search.SearchFragment
 import com.example.disaster_helper.Setting.SettingFragment
 import com.example.disaster_helper.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
+import java.security.MessageDigest
+import java.security.NoSuchAlgorithmException
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,6 +27,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        getKeyHash2()
 
         val homeFragment = HomeFragment()
         val searchFragment = SearchFragment()
@@ -44,6 +53,35 @@ class MainActivity : AppCompatActivity() {
             true
         }
     }
+
+    /*
+    fun getKeyHash() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+            val packageInfo = requireContext().packageManager.getPackageInfo(requireContext().packageName, PackageManager.GET_SIGNING_CERTIFICATES)
+            for (signature in packageInfo.signingInfo.apkContentsSigners) {
+                try {
+                    val md = MessageDigest.getInstance("SHA")
+                    md.update(signature.toByteArray())
+                    Log.d("getKeyHash", "key hash: ${Base64.encodeToString(md.digest(), Base64.NO_WRAP)}")
+                } catch (e: NoSuchAlgorithmException) {
+                    Log.w("getKeyHash", "Unable to get MessageDigest. signature=$signature", e)
+                }
+            }
+        }
+    }*/
+
+    fun getKeyHash2() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+            try {
+                val md = MessageDigest.getInstance("SHA")
+                md.update(packageName.toByteArray())
+                Log.d("getKeyHash", "key hash: ${Base64.encodeToString(md.digest(), Base64.NO_WRAP)}")
+            } catch (e: NoSuchAlgorithmException) {
+                Log.w("getKeyHash", "Unable to get MessageDigest.", e)
+            }
+        }
+    }
+
 
     private fun replaceFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction() // 트랜젝션 : 작업을 시작한다고 알려줌;
