@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="disaster_kind">
+        <item>지진</item>
+        <item>핵</item>
+    </string-array>
+</resources>

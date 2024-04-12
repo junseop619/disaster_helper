@@ -18,6 +18,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Disaster_helper"
         tools:targetApi="31">
+
+        <meta-data
+            android:name="com.kakao.sdk.AppKey" android:value="fca552c247790d298f57cfbaf885d11f" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -30,9 +34,7 @@
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-            <meta-data
-                android:name="com.kakao.sdk.AppKey"
-                android:value="fca552c247790d298f57cfbaf885d11f" />
+
         </activity>
     </application>
 

@@ -6,6 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.disaster_helper.R
 import com.example.disaster_helper.databinding.FragmentHomeBinding
@@ -37,6 +40,32 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
             binding!!.refreshLayout.isRefreshing=false
         }
+
+        val data: Array<String> = resources.getStringArray(R.array.disaster_kind)
+        val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, data)
+        binding!!.frameSpinner.adapter = adapter
+        binding!!.frameSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                /*
+                if (position != 0) {
+                    Toast.makeText(requireContext(), data[position], Toast.LENGTH_SHORT).show()
+                }*/
+
+                when(position){
+                    0 -> {
+                        binding!!.disasterDisplay.text = "1단계"
+                    }
+
+                    1 -> {
+                        binding!!.disasterDisplay.text = "2단계"
+                    }
+                }
+            }
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+            }
+        }
+
     }
 
     fun initNoticeRecyclerView(){
