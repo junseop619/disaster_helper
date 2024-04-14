@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="8dp"
+    android:gravity="center">
+
+    <!-- 텍스트 뷰 -->
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="마커 설명"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"  />
+
+    <!-- 버튼 -->
+    <Button
+        android:id="@+id/search_load_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼"
+        android:textSize="14sp"
+        android:onClick="onButtonClick" />
+
+
+
+</LinearLayout>
