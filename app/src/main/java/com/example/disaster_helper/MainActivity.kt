@@ -9,7 +9,6 @@ import android.util.Log
 import androidx.fragment.app.Fragment
 import com.example.disaster_helper.Home.HomeFragment
 import com.example.disaster_helper.search.SearchFragment
-import com.example.disaster_helper.Setting.SettingFragment
 import com.example.disaster_helper.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
 import java.security.MessageDigest
@@ -30,7 +29,6 @@ class MainActivity : AppCompatActivity() {
 
         val homeFragment = HomeFragment()
         val searchFragment = SearchFragment()
-        val settingFragment = SettingFragment()
 
         val bottomNavigationView = binding.navigationView
 
@@ -43,10 +41,6 @@ class MainActivity : AppCompatActivity() {
 
                 //search
                 R.id.searchFragment -> replaceFragment(searchFragment)
-
-
-                //setting
-                R.id.settingFragment -> replaceFragment(settingFragment)
             }
             true
         }

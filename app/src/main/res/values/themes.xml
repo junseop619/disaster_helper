@@ -3,8 +3,8 @@
     <style name="Theme.Disaster_helper" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
 
-        <item name="colorPrimary">#d5f0e7</item> <!--임시 변경-->
-        <item name="colorPrimaryVariant">#5cd1e5</item>  <!--임시변경-->
+        <item name="colorPrimary">#99ccff</item> <!--임시 변경-->
+        <item name="colorPrimaryVariant">#FFFFFF</item>  <!--임시변경-->
 
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- AlertDialog의 내용을 구성 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="비상사태 발생 시 국민행동요령"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:padding="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="비상시 정부 대응"
+            android:gravity="center"
+            android:padding="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="- 국가비상사태 : 적 공격이 예상되거나 시작되면 국가비상사태를 선포하여 민ㆍ관ㆍ군이 힘을 합쳐 대응합니다.\n
+- 국가동원령 : 인력ㆍ물자ㆍ장비 등을 동원하는 국가동원령을 선포하여 국가 위기극복을 지원합니다.\n
+- 생필품 배급 : 유사시 국민생활 안정시키는 생활필수품을 유통·관리하고 필요시 배급제를 실시합니다."
+            android:gravity="center"
+            android:padding="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="비상사태 발생시 국민행동요령"
+            android:gravity="center"
+            android:padding="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="※ 즉시 가정으로 복귀하되, 동원하는 중점관리대상업체 직원들은 직장으로 복귀합니다.\n
+※ 국가기관의 운행 차량을 제외하고는 모든 자동차의 개인차량 운행이 통제되므로 대중교통 수단을 이용합니다.\n
+※ 단전·단수에 대비하여 손전등, 양초, 라이터(성냥)를 준비하고, 욕조나 큰 그릇에 물을 받아 두고 아껴 써야 합니다.\n
+※ 집 밖으로 나오지 말고, TV·라디오·민방위 방송을 계속 들으면서 정부의 안내를 따라야 합니다.\n
+※ 통화량 급증으로 통신망이 마비되지 않도록 불필요한 전화 사용은 자제합니다."
+            android:gravity="center"
+            android:padding="16dp" />
+
+        <Button
+            android:id="@+id/all_close_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="닫기"
+            android:layout_margin="16dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

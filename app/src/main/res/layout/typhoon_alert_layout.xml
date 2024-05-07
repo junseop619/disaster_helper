@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- AlertDialog의 내용을 구성 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="태풍 발생 시 국민행동요령"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:padding="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="- 자주 물에 잠기는 지역, 산사태 위험지역 등의 위험한 곳은 \n  피하고, 안전한 곳으로 대피합니다.\n\n
+- 실내에서는 문과 창문을 닫고, 외출을 하지 않으며, TV, 라디오, \n   인터넷 등을 통해 가상 상황을 확인합니다.\n\n
+- 개울가, 하천변, 해안가 등 침수 위험지역은 급류에 휩쓸릴 수 \n   있으니 가까이 가지 않습니다.\n\n
+- 산과 계곡의 등산객은 계곡이나 비탈면 가까이 가지 않고, \n   안전한 곳으로 대피합니다.\n
+- 공사자재가 넘어질 수 있으니 공사장 근처에 가까이 가지 \n   않습니다.\n\n
+- 농촌에서는 논둑이나 물꼬의 점검을 위해 나가지 않습니다.         "
+            android:gravity="left"
+            android:padding="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="하천 급류"
+           android:gravity="left"
+            android:padding="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="- 호우·태풍 등으로 하천 수위가 높아지는 경우 하천 주변에 \n  접근하지 않습니다."
+            android:gravity="left"
+            android:padding="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="차량 침수"
+            android:gravity="left"
+            android:padding="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="- 조금이라도 침수된 지하차도와 도로는 절대 지나가지 않습니다."
+            android:gravity="left"
+            android:padding="16dp" />
+
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="강풍에 의한 낙하물강풍에 의한 낙하물"
+        android:gravity="left"
+        android:padding="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="- 유리창 및 건물 간판 근처는 강풍에 의한 낙하물로 피해를 입을 수 있으니 가급적 공터나 건물 안으로 대피합니다."
+            android:gravity="left"
+            android:padding="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="낙뢰"
+            android:gravity="left"
+            android:padding="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="- 번개를 본 후 30초 이내에 천둥소리를 들었다면 신속히 안전한 장소로 대피하여 즉시 몸을 낮추고 물이 없는 움푹 파인 곳이나 동굴 안으로 대피합니다."
+            android:gravity="left"
+            android:padding="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="세월교·교량 횡단"
+            android:gravity="left"
+            android:padding="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="- 세월교나 소규모 교량이 물에 잠긴 경우 절대 건너지 않습니다."
+            android:gravity="left"
+            android:padding="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="물꼬"
+            android:gravity="left"
+            android:padding="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="- 호우·태풍 특보가 발효된 경우 물꼬를 보러 나가지 않도록 합니다."
+            android:gravity="left"
+            android:padding="16dp" />
+
+        <Button
+            android:id="@+id/typhoon_close_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="닫기"
+            android:layout_margin="16dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

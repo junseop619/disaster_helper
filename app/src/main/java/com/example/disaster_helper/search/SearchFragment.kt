@@ -17,6 +17,7 @@ import androidx.fragment.app.Fragment
 import com.example.disaster_helper.R
 import com.example.disaster_helper.databinding.FragmentSearchBinding
 import kotlinx.coroutines.Dispatchers.Main
+import kotlinx.serialization.Serializable
 import net.daum.mf.map.api.CalloutBalloonAdapter
 import net.daum.mf.map.api.MapPOIItem
 import net.daum.mf.map.api.MapPoint
@@ -27,6 +28,9 @@ import org.xmlpull.v1.XmlPullParserFactory
 import java.io.IOException
 import java.io.StringReader
 
+var real_name: String = ""
+var real_address: String = ""
+
 class SearchFragment : Fragment() {
 
     private lateinit var binding: FragmentSearchBinding
@@ -34,6 +38,8 @@ class SearchFragment : Fragment() {
 
     var districtLatitude: Double =0.00
     var districtLongitude : Double = 0.00
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -356,6 +362,11 @@ class SearchFragment : Fragment() {
         val markers = shelters.map { shelter ->
             val marker = MapPOIItem().apply {
                 itemName = shelter.facilityName
+                real_name = itemName
+                itemName = shelter.address
+                real_address = itemName
+
+
                 tag = shelter.id.toInt()
                 mapPoint = MapPoint.mapPointWithGeoCoord(shelter.latitude, shelter.longitude)
             }
@@ -376,16 +387,22 @@ class SearchFragment : Fragment() {
 
         override fun getCalloutBalloon(poiItem: MapPOIItem?): View {
             // 마커 클릭 시 나오는 말풍선
-            name.text = poiItem?.itemName
-            address.text = "getCalloutBalloon"
+            //name.text = poiItem?.itemName
+            //address.text =
+
+            name.text = real_name
+            address.text = real_address
             return mCalloutBalloon
         }
 
 
         override fun getPressedCalloutBalloon(poiItem: MapPOIItem?): View {
             // 말풍선 클릭 시
+            /*
             Log.d("success","data sent successfully")
-            address.text = "getPressedCalloutBalloon"
+            //address.text = "getPressedCalloutBalloon"
+            //name.text = poiItem?.itemName
+            address.text = real_name*/
             return mCalloutBalloon
         }
     }
@@ -406,7 +423,8 @@ class SearchFragment : Fragment() {
             Log.d("success3","data sent successfully")
             val builder = AlertDialog.Builder(context)
             val itemList = arrayOf("걸어서", "차타고", "취소")
-            builder.setTitle("${poiItem?.itemName}")
+            //builder.setTitle("${poiItem?.itemName}")
+            builder.setTitle("${real_name}")
             builder.setItems(itemList) { dialog, which ->
                 when(which) {
                     0 -> {
